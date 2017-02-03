@@ -1,0 +1,500 @@
+<!doctype html>
+<!--[if lt IE 8]> <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>FORMS</title>
+  <script type="text/javascript">
+  window.onload = function() {
+    // Active menu section
+    var active = document.getElementsByTagName('body')[0];
+    if(active.dataset.active) {
+      var activeMenu = document.getElementById(active.dataset.active);
+      activeMenu.classList.add("active");
+    }
+
+    // Hide images if they are 1px height
+    var guideImages = document.getElementsByClassName('guide-image');
+    for(i=0; i<guideImages.length; i++) {
+      if(guideImages[i].clientHeight <= 2) {
+        guideImages[i].parentNode.classList.add("hide");
+      }
+    }
+  }
+</script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="assets/style.css" media="all" rel="stylesheet" />
+</head>
+<body data-active="forms-forms">
+  <nav role="navigation" id="main-nav">
+  <header class="logo">
+  
+    <a href="index.html"><img src="assets/logo.png"></a>
+  
+  </header>
+  <ul>
+    
+      <li id="overview-overview">
+        <a href="OVERVIEW.html">OVERVIEW</a>
+        <ol>
+          
+            <li>
+              <a href="OVERVIEW.html#overview-overview" class="">Overview</a>
+            </li>
+          
+        </ol>
+      </li>
+    
+      <li id="design-design">
+        <a href="DESIGN.html">DESIGN</a>
+        <ol>
+          
+            <li>
+              <a href="DESIGN.html#design-colors" class="">Colors</a>
+            </li>
+          
+            <li>
+              <a href="DESIGN.html#design-typography" class="">Typography</a>
+            </li>
+          
+        </ol>
+      </li>
+    
+      <li id="forms-forms">
+        <a href="FORMS.html">FORMS</a>
+        <ol>
+          
+            <li>
+              <a href="FORMS.html#forms-preface" class="">PREFACE</a>
+            </li>
+          
+            <li>
+              <a href="FORMS.html#forms-inputs" class="">Inputs</a>
+            </li>
+          
+            <li>
+              <a href="FORMS.html#forms-/credit_card_input" class="sub">Credit Card Input</a>
+            </li>
+          
+            <li>
+              <a href="FORMS.html#forms-/promo_code_input" class="sub">Promo Code Input</a>
+            </li>
+          
+            <li>
+              <a href="FORMS.html#forms-selects" class="">Selects</a>
+            </li>
+          
+            <li>
+              <a href="FORMS.html#forms-radio_buttons" class="">Radio Buttons</a>
+            </li>
+          
+            <li>
+              <a href="FORMS.html#forms-textarea" class="">Textarea</a>
+            </li>
+          
+            <li>
+              <a href="FORMS.html#forms-delivery_date" class="">Delivery Date</a>
+            </li>
+          
+            <li>
+              <a href="FORMS.html#forms-shipping_method" class="">Shipping Method</a>
+            </li>
+          
+        </ol>
+      </li>
+    
+      <li id="buttons-buttons">
+        <a href="BUTTONS.html">BUTTONS</a>
+        <ol>
+          
+            <li>
+              <a href="BUTTONS.html#buttons-preface" class="">PREFACE</a>
+            </li>
+          
+            <li>
+              <a href="BUTTONS.html#buttons-primary_buttons" class="">Primary Buttons</a>
+            </li>
+          
+            <li>
+              <a href="BUTTONS.html#buttons-secondary_buttons" class="">Secondary Buttons</a>
+            </li>
+          
+            <li>
+              <a href="BUTTONS.html#buttons-link_style_buttons" class="">Link Style Buttons</a>
+            </li>
+          
+        </ol>
+      </li>
+    
+      <li id="miscellaneous-miscellaneous">
+        <a href="MISCELLANEOUS.html">MISCELLANEOUS</a>
+        <ol>
+          
+        </ol>
+      </li>
+    
+  </ul>
+</nav>
+  <article id="content">
+    <header id="main">
+  <h1>FORMS</h1>
+  
+    <section class="preface">
+      <p>Inputs, Selects, Textareas, Radio Buttons, Check Boxes</p>
+
+    </section>
+  
+</header>
+
+    
+<section class="artboard" id="forms-preface">
+  
+  <header>
+    <h2>PREFACE</h2>
+  </header>
+  
+  <section class="image">
+    <img src="img/forms-preface.png" class="retina-image guide-image">
+  </section>
+  
+</section>
+
+<section class="artboard" id="forms-inputs">
+  
+  <header>
+    <h2>Inputs</h2>
+  </header>
+  
+  <section class="image">
+    <img src="img/forms-inputs.png" class="retina-image guide-image">
+  </section>
+  
+</section>
+
+<section class="artboard" id="forms-/credit_card_input">
+  
+  <header>
+    <h3>Credit Card Input</h3>
+  </header>
+  
+  <section class="image">
+    <img src="img/forms-/credit_card_input.png" class="retina-image guide-image">
+  </section>
+  
+  <section class="content">
+    <p><strong>1.0 STATIC</strong><br />
+<strong>Interaction</strong> </p>
+<ul>
+<li>Inherits standard input propertied and styles</li>
+</ul>
+<p><strong>2.0 CARD TYPE</strong><br />
+<strong>Interaction</strong></p>
+<ul>
+<li>Inherits focus from inputs</li>
+<li>Upon detecting card type logo of card type appears in input. Excess text flows underneath the logo.</li>
+<li>Allows dashes and spaces. Excess characters are removed </li>
+</ul>
+<p><strong>Styles</strong></p>
+<ul>
+<li>label text - font-size: 20, #525252</li>
+<li>input shadow - box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.45)</li>
+<li>input text - font-size 26, #333333</li>
+</ul>
+<p><strong>3.0 ERROR</strong><br />
+<strong>Interaction</strong></p>
+<ul>
+<li>error triggers on blur and on key down and sometimes submit triggers error</li>
+<li>Border,label, input text changes color</li>
+<li>red invalid x appears next to input</li>
+<li>red error message appears below input if needed pushes helper text down</li>
+<li>animation - icon slides right, error message slides down </li>
+<li>if error message size exceeds length of input it wraps</li>
+<li>error always superscedes warnings</li>
+</ul>
+<p><strong>Styles</strong></p>
+<ul>
+<li>red: #D0021B</li>
+<li>label becomes bold in addition to changing color</li>
+<li>error message size 16px </li>
+</ul>
+<table><thead><tr></tr></thead><tbody><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr></tbody></table>
+  </section>
+  
+</section>
+
+<section class="artboard" id="forms-/promo_code_input">
+  
+  <header>
+    <h3>Promo Code Input</h3>
+  </header>
+  
+  <section class="image">
+    <img src="img/forms-/promo_code_input.png" class="retina-image guide-image">
+  </section>
+  
+  <section class="content">
+    <p><strong>1.0 HIDDEN</strong><br />
+<strong>Interaction</strong></p>
+<ul>
+<li>Clicking or tapping link style button will hide text and reveal promo code box and button</li>
+</ul>
+<p><strong>Styles</strong></p>
+<ul>
+<li>Uses link button style on pattern library</li>
+<li>Uses single pixel line above and below</li>
+</ul>
+<p><strong>2.0 VISIBLE</strong><br />
+<strong>Interaction</strong></p>
+<ul>
+<li>Visible promo code and apply button</li>
+</ul>
+<p><strong>Styles</strong></p>
+<ul>
+<li>inherits inpt pattern and use link button style</li>
+</ul>
+<p><strong>3.0 APPLIED</strong><br />
+<strong>Interaction</strong></p>
+<ul>
+<li>Applying a valid promo code triggers a [Code] successfully applied message. </li>
+<li>Slides down similar to helper text</li>
+</ul>
+<p><strong>Styles</strong></p>
+<ul>
+<li>inherits helper text style and checkmark from validation</li>
+</ul>
+<p><strong>4.0 APPLIED EXPIRED</strong><br />
+<strong>Interaction</strong></p>
+<ul>
+<li>Applying an expired promo code triggers a [Code] has expired message</li>
+<li>Slides down similar to helper text</li>
+</ul>
+<p><strong>Styles</strong></p>
+<ul>
+<li>inherits helper text style and warning from validation</li>
+</ul>
+<p><strong>5.0 APPLIED INVALID</strong><br />
+<strong>Interaction</strong></p>
+<ul>
+<li>Applying an invalid promo code triggers a [Code] applied is invalid message</li>
+<li>Slides down similar to helper text</li>
+</ul>
+<p><strong>Styles</strong></p>
+<ul>
+<li>inherits helper text style and warning from validation</li>
+</ul>
+<p><strong>6.0 APPLYING A NEW CODE</strong><br />
+<strong>Inherits</strong></p>
+<ul>
+<li>Adding any code beyond the first valid the user will be presented with helper text. Text warns them code will be replaced</li>
+<li>Slides down similar to helper text</li>
+</ul>
+<p><strong>Styles</strong></p>
+<ul>
+<li>inherits helper text style</li>
+</ul>
+
+  </section>
+  
+</section>
+
+<section class="artboard" id="forms-selects">
+  
+  <header>
+    <h2>Selects</h2>
+  </header>
+  
+  <section class="image">
+    <img src="img/forms-selects.png" class="retina-image guide-image">
+  </section>
+  
+  <section class="content">
+    <p><strong>1.0 STATIC</strong><br />
+<strong>Interaction</strong></p>
+<ul>
+<li>The select will scale to the content width
+- Selects are only used when there are between 6 to 15 options</li>
+<li>Uses default dropdown menu to leverage best experience on touch devices
+- Dropdown menu should leverage categorization when possible</li>
+</ul>
+<p><strong>Styles</strong></p>
+<ul>
+<li>max-width: 500px - applies to 1024px width and larger
+- min-width: scales to 80% device width </li>
+<li>height: 40px</li>
+<li>border: 1px solid #525252</li>
+<li>border-radius: 5px</li>
+<li>background-color: #ffffff</li>
+<li>placeholder text - Sentence case
+- label size - 18px</li>
+<li>uses new triangle and left border</li>
+</ul>
+<p><strong>2.0 FOCUS</strong><br />
+<strong>Interaction</strong></p>
+<ul>
+<li>Drop shadow will appear around active/focus input </li>
+<li>Border darkens</li>
+<li>This will be imperceptible on mobile devices with the select menu overlay</li>
+</ul>
+<p><strong>Styles</strong></p>
+<ul>
+<li>label text - font-size: 20, #525252</li>
+<li>input shadow - box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.45)</li>
+<li>input text - font-size 26, #333333</li>
+</ul>
+<p><strong>3.0 VALID</strong><br />
+<strong>Interaction</strong> </p>
+<ul>
+<li>On exit if valid append check mark outside box only appears after fixing error</li>
+<li>Error triggers on exit or button submit. </li>
+<li>Exception being when a default is selected and user proceeds with default</li>
+</ul>
+<p><strong>Styles</strong></p>
+<ul>
+<li>checkmark scales according to device size. 24px</li>
+</ul>
+<p><strong>4.0 ERROR</strong><br />
+<strong>Interaction</strong></p>
+<ul>
+<li>same function as input</li>
+</ul>
+<p><strong>Styles</strong></p>
+<ul>
+<li>red: #D0021B</li>
+<li>label becomes bold in addition to changing color</li>
+<li>error message size 16px </li>
+</ul>
+<table><thead><tr></tr></thead><tbody><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr></tbody></table>
+  </section>
+  
+</section>
+
+<section class="artboard" id="forms-radio_buttons">
+  
+  <header>
+    <h2>Radio Buttons</h2>
+  </header>
+  
+  <section class="image">
+    <img src="img/forms-radio_buttons.png" class="retina-image guide-image">
+  </section>
+  
+  <section class="content">
+    <p><strong>1.0 STATIC</strong><br />
+<strong>Interaction</strong></p>
+<ul>
+<li>The select will scale to the content width
+- Selects are only used when there are between 6 to 15 options</li>
+<li>Uses default dropdown menu to leverage best experience on touch devices
+- Dropdown menu should leverage categorization when possible</li>
+</ul>
+<p><strong>Styles</strong></p>
+<ul>
+<li>max-width: 500px - applies to 1024px width and larger
+- min-width: scales to 80% device width </li>
+<li>height: 40px</li>
+<li>border: 1px solid #525252</li>
+<li>border-radius: 5px</li>
+<li>background-color: #ffffff</li>
+<li>placeholder text - Sentence case
+- label size - 18px</li>
+<li>uses new triangle and left border</li>
+</ul>
+<p><strong>2.0 HOVER/PRESS</strong><br />
+<strong>Interaction</strong></p>
+<ul>
+<li>Radio button changes color on hover / press</li>
+</ul>
+<p><strong>Styles</strong></p>
+<ul>
+<li>border: 1px solid #168DDB</li>
+<li>color: #168DDB</li>
+</ul>
+<p><strong>3.0 SELECTED</strong><br />
+<strong>Interaction</strong> </p>
+<ul>
+<li>Radio button changes color on select</li>
+<li>Helper text slides down</li>
+<li>Background color and font color change</li>
+<li>Radio buttton fills</li>
+</ul>
+<p><strong>Styles</strong></p>
+<ul>
+<li>border: 1px solid #168DDB</li>
+<li>background: #168DDB</li>
+<li>color: #FFF</li>
+</ul>
+<table><thead><tr></tr></thead><tbody><tr></tr><tr></tr><tr></tr><tr></tr></tbody></table>
+  </section>
+  
+</section>
+
+<section class="artboard" id="forms-textarea">
+  
+  <header>
+    <h2>Textarea</h2>
+  </header>
+  
+  <section class="image">
+    <img src="img/forms-textarea.png" class="retina-image guide-image">
+  </section>
+  
+  <section class="content">
+    <p><strong>1.0 STATIC</strong><br />
+<strong>Interaction</strong> </p>
+<ul>
+<li>Inherits input interaction and style</li>
+<li>Height is suitable for multiple lines of text</li>
+<li>Has character counter in bottom right.
+- Textarea does not use validation and error state </li>
+</ul>
+<p><strong>2.0 FOCUS</strong><br />
+<strong>Interaction</strong></p>
+<ul>
+<li>Inherits focus form input</li>
+<li>Character counter counts up as user types</li>
+</ul>
+<p><strong>3.0 WARNING</strong><br />
+<strong>Interaction</strong></p>
+<ul>
+<li>Inherits warning from input</li>
+<li>Character counter counts up as user types</li>
+<li>Helper text - warning message slides down when user
+is within 10 characters of max.</li>
+<li>Warning symbol slides down and slides counter left</li>
+<li>Text wraps around counter</li>
+</ul>
+<table><thead><tr></tr></thead><tbody><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr></tbody></table>
+  </section>
+  
+</section>
+
+<section class="artboard" id="forms-delivery_date">
+  
+  <header>
+    <h2>Delivery Date</h2>
+  </header>
+  
+  <section class="image">
+    <img src="img/forms-delivery_date.png" class="retina-image guide-image">
+  </section>
+  
+</section>
+
+<section class="artboard" id="forms-shipping_method">
+  
+  <header>
+    <h2>Shipping Method</h2>
+  </header>
+  
+  <section class="image">
+    <img src="img/forms-shipping_method.png" class="retina-image guide-image">
+  </section>
+  
+</section>
+
+  </article>
+</body>
+</html>
